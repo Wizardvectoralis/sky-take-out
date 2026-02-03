@@ -7,7 +7,7 @@ spring:
   main:
     allow-circular-references: true
   datasource:
-    druid:
+#    druid:黑马原来用了druid数据源所以需要加这个前缀，而之前的项目都是springboot默认的hikari数据源，所以不用加这个前缀
       driver-class-name: ${sky.datasource.driver-class-name}
       url: jdbc:mysql://${sky.datasource.host}:${sky.datasource.port}/${sky.datasource.database}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
       username: ${sky.datasource.username}
